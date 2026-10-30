@@ -122,14 +122,28 @@ header .links nav ul li a:hover {
 /* video background */
 
 .background-video {
-    
+    overflow: hidden;
 }
 .background-video video {
-    
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    filter: brightness(25%);
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
+
 @media (max-width: 767px) {
-    
+    .background-video video {
+        display: none;
+    }
 }
+
 
 /* home-section */
 .home {
